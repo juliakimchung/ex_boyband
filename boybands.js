@@ -5,10 +5,10 @@ var vegetables = ["Carrots", "Kale", "Zucchini", "Broccoli", "Squash"];
 var loopCount = 5;
 
 // Keep track of which band we're on in the loop
-var currentBand = "";
+var currentBand = [];
 
 // Keep track of which veggie we're on in the loop
-var currentVeggie = "";
+var currentVeggie = [];
 
 // Get a reference to the appropriate DOM element for bands
 var bandElement = document.getElementById("boy-bands");
@@ -20,11 +20,13 @@ var veggieElement = document.getElementById("vegetables");
 for (var loopTracker = 0; loopTracker < loopCount; loopTracker += 1) {
 
   // Add the band names into the correct <div>
-  currentBand = bandElement[loopTracker];
+  currentBand.push(bands[loopTracker]);
 
 
   // Add the veggie names into the correct <div>
-  currentVeggie = veggieElement[loopTracker];
+  currentVeggie.push(vegetables[loopTracker]);
 
 }
-console.log("current band: ", currentBand)
+
+console.log("current band is:", currentBand);
+console.log("current veggie is", currentVeggie);
